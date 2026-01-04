@@ -1,0 +1,107 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 6rem 2rem;
+    /* Subtle gradient background */
+    background: radial-gradient(circle at 50% 10%, rgba(0, 242, 255, 0.05), transparent 40%);
+}
+
+.content {
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(112, 0, 255, 0.1);
+    color: var(--secondary);
+    border: 1px solid rgba(112, 0, 255, 0.2);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.role {
+    background: linear-gradient(to right, var(--foreground), var(--accent));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.bio {
+    font-size: 1.25rem;
+    color: #888;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.primaryBtn {
+    padding: 1rem 2.5rem;
+    background: var(--foreground);
+    color: var(--background);
+    font-weight: 600;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.socialLink {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+}
+
+.socialLink:hover {
+    color: var(--foreground);
+    border-bottom-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .bio {
+        font-size: 1.1rem;
+    }
+}

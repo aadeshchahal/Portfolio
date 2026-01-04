@@ -1,0 +1,63 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--surface);
+    border-radius: 12px;
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    max-height: 80vh;
+    /* Takes up most of the screen height but contained */
+    height: 600px;
+    /* Fallback fixed height */
+    border: 1px solid var(--border);
+    /* Define boundary clearly */
+}
+
+.loader {
+    padding: 4rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.error {
+    padding: 2rem;
+    color: #ff6b6b;
+    text-align: center;
+}
+
+.document {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.pageContainer {
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    /* Matches default PDF look slightly */
+    overflow: hidden;
+}
+
+.page canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+.pageNumber {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    pointer-events: none;
+}
