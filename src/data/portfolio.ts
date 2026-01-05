@@ -66,7 +66,7 @@ export const portfolioData: PortfolioData = {
             "MANU 465: AI and Machine Learning Application in Manufacturing",
         ],
         technicalInterests: ["Oil and Gas", "Mining", "NDE / Asset Integrity", "Semiconductor Materials and Processes", "Finance"],
-        personalInterests: ["Weightlifting", "High-Fidelity Audio", "Photography", "Strategic Investing"],
+        personalInterests: ["Weightlifting", "Ice Hockey", "Golf",],
         social: [
             { platform: "LinkedIn", url: "https://www.linkedin.com/in/aadeshchahal/" },
             { platform: "GitHub", url: "https://github.com/aadeshchahal" },
@@ -130,29 +130,6 @@ export const portfolioData: PortfolioData = {
             pdfUrl: "/pdfs/Haul Truck Bolster Corrosion .pdf"
         },
         {
-            id: "p5",
-            title: "Options Analytics Engine",
-            description: "Engineered a quantitative dashboard for real-time BSM pricing and Greek sensitivity analysis using Python & Streamlit.",
-            detailedDescription: "Developed a comprehensive Options Analytics Platform to bridge the gap between theoretical pricing models and real-time market visualization. The application provides a live quantitative dashboard for Black-Scholes-Merton (BSM) pricing and calculates 'Greeks' for risk management. \n\nA key focus was implementing high-performance Monte Carlo simulations and creating intuitive 3D visualizations to help users understand the relationship between option premiums, strike prices, and time to maturity.",
-            challenges: [
-                "Optimizing computationally expensive Monte Carlo simulations for real-time user interaction.",
-                "Visualizing complex multi-dimensional data (volatility surfaces) in an accessible web interface.",
-                "Ensuring accuracy of financial models against theoretical benchmarks."
-            ],
-            results: [
-                "Reduced Monte Carlo execution time for 100,000 paths by 20x using NumPy vectorization.",
-                "Deployed a live interactive dashboard capable of real-time sensitivity analysis.",
-                "Enabled intuitive visualization of 3D volatility surfaces using Plotly."
-            ],
-            tags: ["Python", "Streamlit", "NumPy", "Quantitative Finance", "Plotly", "Monte Carlo"],
-            imageUrl: "/projects/options-analytics/cover-greeks-simple.png",
-            github: "https://github.com/aadeshchahal/Options-Pricer",
-            link: "https://options-pricer-aadeshchahal.streamlit.app/",
-            embedUrl: "https://options-pricer-aadeshchahal.streamlit.app/?embed=true",
-            documents: [],
-            gallery: []
-        },
-        {
             id: "p4",
             title: "Airless RC Car Tires",
             description: "Designed, manufactured, and tested 3D-printed airless tires, reducing costs by 85% while maintaining performance.",
@@ -177,6 +154,29 @@ export const portfolioData: PortfolioData = {
                 { url: "/projects/airless-tires/Mugen Seiki MTX-3 RC Car Used for Testing.png", caption: "Mugen Seiki MTX-3 RC Car Used for Testing", type: "image" },
                 { url: "/projects/airless-tires/TPU Tire Wear.png", caption: "TPU Tire Wear Analysis", type: "image" }
             ]
+        },
+        {
+            id: "p5",
+            title: "Options Analytics Engine",
+            description: "Engineered a quantitative dashboard for real-time BSM pricing and Greek sensitivity analysis using Python & Streamlit.",
+            detailedDescription: "Developed a comprehensive Options Analytics Platform to bridge the gap between theoretical pricing models and real-time market visualization. The application provides a live quantitative dashboard for Black-Scholes-Merton (BSM) pricing and calculates 'Greeks' for risk management. \n\nA key focus was implementing high-performance Monte Carlo simulations and creating intuitive 3D visualizations to help users understand the relationship between option premiums, strike prices, and time to maturity.",
+            challenges: [
+                "Optimizing computationally expensive Monte Carlo simulations for real-time user interaction.",
+                "Visualizing complex multi-dimensional data (volatility surfaces) in an accessible web interface.",
+                "Ensuring accuracy of financial models against theoretical benchmarks."
+            ],
+            results: [
+                "Reduced Monte Carlo execution time for 100,000 paths by 20x using NumPy vectorization.",
+                "Deployed a live interactive dashboard capable of real-time sensitivity analysis.",
+                "Enabled intuitive visualization of 3D volatility surfaces using Plotly."
+            ],
+            tags: ["Python", "Streamlit", "NumPy", "Quantitative Finance", "Plotly", "Monte Carlo"],
+            imageUrl: "/projects/options-analytics/cover-greeks-simple.png",
+            github: "https://github.com/aadeshchahal/Options-Pricer",
+            link: "https://options-pricer-aadeshchahal.streamlit.app/",
+            embedUrl: "https://options-pricer-aadeshchahal.streamlit.app/?embed=true",
+            documents: [],
+            gallery: []
         },
         {
             id: "p3",
