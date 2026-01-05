@@ -1,21 +1,22 @@
 :root {
-  --background: #050505;
-  --foreground: #ededed;
-  
-  /* Primary Accent: Electric Cyan */
-  --accent: #00f2ff;
-  --accent-glow: rgba(0, 242, 255, 0.3);
-  
-  /* Secondary Accent: Deep Purple */
-  --secondary: #7000ff;
-  
+  --background: #ffffff;
+  --foreground: #111111;
+
+  /* Primary Accent: Royal Blue (Professional, Trustworthy) */
+  --accent: #0052cc;
+  --accent-glow: rgba(0, 82, 204, 0.15);
+
+  /* Secondary Accent: Slate Grey */
+  --secondary: #64748b;
+
   /* Surface Colors */
-  --surface: #111111;
-  --surface-hover: #1a1a1a;
-  --border: #333333;
-  
+  --surface: #f8f9fa;
+  --surface-hover: #f1f3f5;
+  --border: #e2e8f0;
+
   /* Typography */
-  --font-heading: 'Outfit', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  /* Unified font for cleaner look */
   --font-body: 'Inter', sans-serif;
 }
 
@@ -45,7 +46,12 @@ a:hover {
   color: var(--accent);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   text-wrap: balance;
   color: #ffffff;

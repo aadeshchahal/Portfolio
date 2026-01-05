@@ -9,9 +9,9 @@ export default function Navbar() {
                     Portfolio<span className={styles.dot}>.</span>
                 </Link>
                 <div className={styles.links}>
-                    <Link href="#work" className={styles.link}>Work</Link>
-                    <Link href="#about" className={styles.link}>About</Link>
-                    <Link href="#contact" className={styles.cta}>Contact</Link>
+                    <Link href="/projects" className={styles.link}>Featured Projects</Link>
+                    <Link href="/experience" className={styles.link}>Work Experience</Link>
+                    <Link href="/contact" className={styles.cta}>Contact</Link>
                 </div>
             </div>
         </nav>

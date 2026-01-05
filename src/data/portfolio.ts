@@ -22,6 +22,7 @@ export interface Experience {
     company: string;
     period: string;
     summary: string; // Short one-liner for the home page
+    intro?: string; // Brief intro paragraph for the dedicated page
     description: string[]; // Detailed bullet points for the dedicated page
     images?: string[]; // Array of paths to images in public/experience folder
 }
@@ -37,7 +38,14 @@ export interface PortfolioData {
         name: string;
         role: string;
         bio: string;
+        about: string; // Longer introduction
+        photoUrl?: string; // Profile picture
+        coursework: string[];
+        technicalInterests: string[];
+        personalInterests: string[]; // Separated for better display
         social: SocialLink[];
+        email?: string;
+        phone?: string;
     };
     projects: Project[];
     experience: Experience[];
@@ -45,13 +53,26 @@ export interface PortfolioData {
 
 export const portfolioData: PortfolioData = {
     profile: {
-        name: "Aadesh", // Inferred from system path, or can be left generic
-        role: "Materials Engineering Student",
+        name: "Aadesh Chahal",
+        role: "UBC Materials Engineering Student",
         bio: "Materials Engineering student with a passion for coding, physical prototyping, and industrial asset optimization.",
-        social: [
-            { platform: "LinkedIn", url: "https://linkedin.com" },
-            { platform: "GitHub", url: "https://github.com" },
+        about: "I'm a Materials Engineering Co-op student at the University of British Columbia with a keen interest in solving real-world problems through engineering and technology.\n\nThrough my previous internship at Suncor Energy paired with my academic coursework, I have gained valuable hands-on experience in the Oil & Gas sector, specifically in industrial asset optimization and failure analysis, leading projects on corrosion control and equipment reliability. \n \nMoving forward, I am eager to apply my skills and knowledge from recent coursework and previous experience to challenging environments within the finance, mining, energy, or semiconductor sectors.",
+        photoUrl: "/profile.jpg", // Expecting file in public folder
+        coursework: [
+            "MTRL 363 & 478: Semiconductor Processing and Materials",
+            "MTRL  361: Modelling of Materials Processes",
+            "MTRL 486: Nondestructive Evaluation",
+            "MTRL 358/9: Hydrometallurgy/Lab",
+            "MANU 465: AI and Machine Learning Application in Manufacturing",
         ],
+        technicalInterests: ["Oil and Gas", "Mining", "NDE / Asset Integrity", "Semiconductor Materials and Processes", "Finance"],
+        personalInterests: ["Weightlifting", "High-Fidelity Audio", "Photography", "Strategic Investing"],
+        social: [
+            { platform: "LinkedIn", url: "https://www.linkedin.com/in/aadeshchahal/" },
+            { platform: "GitHub", url: "https://github.com/aadeshchahal" },
+        ],
+        email: "aadeshchahal1@gmail.com",
+        phone: "+1 (587) 712-2539",
     },
     experience: [
         {
@@ -60,6 +81,7 @@ export const portfolioData: PortfolioData = {
             company: "Suncor Energy",
             period: "May 2024 - Dec 2024",
             summary: "Executed materials engineering projects across all areas of Fort Hills Mine, including mobile mine equipment, fixed plant operations, and tailings management.",
+            intro: "During my 8-month internship at Suncor Energy's Fort Hills Mine, I was able to gain extensive knowledge in the energy and mining sector. \n\n I worked within the Asset Integrity and Reliability team. I was apart of project across the site, from mobile mine equipment to tailings management. This role required a deep understanding of corrosion mechanisms, wear patterns, and NDE techniques to optimize asset performance and reliability." + "\n\n" + "This role allowed me to gain extensive knowledge in the energy and mining sector",
             description: [
                 "Administered a $200K budget to apply a HVOF thermal spray coating to Komatsu 980E haul truck bolsters to decrease exhaust heat corrosion and maintenance time.",
                 "Increased lifespan of slurry piping assets using GE APM to calculate erosion rates from NDE readings and thickness monitoring.",
@@ -73,6 +95,7 @@ export const portfolioData: PortfolioData = {
             company: "Southgate Volkswagen",
             period: "May 2021 - Aug 2023",
             summary: "Managed vehicle logistics, inventory organization, and efficient delivery operations while maintaining a 100% safety rating.",
+            intro: "This was a role I held part time through high school and full time during the summers.\n\nAs a Lot Attendant at Southgate Volkswagen, I played an important role in the daily operations of the dealership. \n\n Here I was able to begin developing skills in priority management, working with cross functional teams, while in a fast-paced environment.",
             description: [
                 "Developed safe driving skills while delivering and collecting vehicles around Alberta to and from customers and shops, while maintaining a 100% safety rating.",
                 "Managed digital scheduling tools for coordinating vehicle movements between the lot, service area, shops, and customers, up to 20 times a day, optimizing workflow efficiency.",
@@ -87,6 +110,25 @@ export const portfolioData: PortfolioData = {
         },
     ],
     projects: [
+        {
+            id: "p1",
+            title: "Komatsu 980E Bolster HVOF Coating Initiative",
+            description: "Administered a $200K budget to implement High Velocity Oxygen Fuel (HVOF) thermal spray coatings on Komatsu 980E haul truck bolsters.",
+            detailedDescription: "The Komatsu 980E haul trucks operate in extreme conditions, where exhaust heat causes severe corrosion on the bolsters. After investigating the extent of the damage using Non-Destructive Evaluation (NDE) techniques, I led the initiative to apply High Velocity Oxygen Fuel (HVOF) thermal spray coatings as a solution. \n\nThis process involves propelling molten powder at high speeds to create a dense, extremely hard, and corrosion-resistant coating.",
+            challenges: [
+                "Managing a strict $200K budget for a high-cost application.",
+                "Coordinating with maintenance teams to minimize truck downtime during application.",
+                "Working with cross functional teams and vendors to ensure successful implementation.",
+            ],
+            results: [
+                "Received $200k in funding to run project trial",
+                "Extended component lifecycle, projected to save thousands in maintenance costs.",
+                "Established a new standard maintenance procedure for the fleet.",
+            ],
+            tags: ["Materials Engineering", "Project Management", "Corrosion Control", "Mining"],
+            imageUrl: "/projects/komatsu-980e.jpg",
+            pdfUrl: "/pdfs/Haul Truck Bolster Corrosion .pdf"
+        },
         {
             id: "p5",
             title: "Options Analytics Engine",
@@ -153,7 +195,6 @@ export const portfolioData: PortfolioData = {
             ],
             tags: ["Materials Engineering", "FEA", "SolidWorks", "Composite Design", "Abaqus"],
             imageUrl: "/projects/hockey/cover.jpg",
-            // pdfUrl removed in favor of documents
             documents: [
                 { title: "Project Framing Report", url: "/pdfs/Ice Hockey Project/Group 10 Framing Report.pdf" },
                 { title: "Final Design Report", url: "/pdfs/Ice Hockey Project/Group_10_Final_Report.pdf" }
@@ -167,25 +208,5 @@ export const portfolioData: PortfolioData = {
                 { url: "/projects/hockey/Resin Transfer Molding Cost.png", caption: "Resin Transfer Molding Cost Analysis", type: "image" },
             ]
         },
-        {
-            id: "p1",
-            title: "Komatsu 980E Bolster HVOF Coating Initiative",
-            description: "Administered a $200K budget to implement High Velocity Oxygen Fuel (HVOF) thermal spray coatings on Komatsu 980E haul truck bolsters.",
-            detailedDescription: "The Komatsu 980E haul trucks operate in extreme conditions, where exhaust heat causes severe corrosion on the bolsters. After investigating the extent of the damage using Non-Destructive Evaluation (NDE) techniques, I led the initiative to apply High Velocity Oxygen Fuel (HVOF) thermal spray coatings as a solution. \n\nThis process involves propelling molten powder at high speeds to create a dense, extremely hard, and corrosion-resistant coating.",
-            challenges: [
-                "Managing a strict $200K budget for a high-cost application.",
-                "Coordinating with maintenance teams to minimize truck downtime during application.",
-                "Working with cross functional teams and vendors to ensure successful implementation.",
-            ],
-            results: [
-                "Received $200k in funding to run project trial",
-                "Extended component lifecycle, projected to save thousands in maintenance costs.",
-                "Established a new standard maintenance procedure for the fleet.",
-            ],
-            tags: ["Materials Engineering", "Project Management", "Corrosion Control", "Mining"],
-            imageUrl: "/projects/komatsu-980e.jpg", // Updated to correct user image
-            pdfUrl: "/pdfs/Haul Truck Bolster Corrosion .pdf" // Linked to uploaded file
-        },
-
     ],
 };

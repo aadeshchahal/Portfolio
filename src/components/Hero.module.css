@@ -1,107 +1,265 @@
 .hero {
-    min-height: 100vh;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 0 4rem;
+}
+
+.mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    /* Space between Top and Bottom sections */
+}
+
+/* =========================================
+   Top Section: Intro Left | Image Right
+   ========================================= */
+.topSection {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* More space for text */
+    gap: 4rem;
+    align-items: center;
+}
+
+.introLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.imageRight {
+    display: flex;
+    justify-content: center;
+    /* Center image in its column */
+    align-items: center;
+}
+
+.profileImageWrapper {
+    width: 280px;
+    /* Larger image for the right side */
+    height: 280px;
+    position: relative;
+    border-radius: 24px;
+    /* Soft square or keep circle if preferred */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: rotate(3deg);
+    /* Slight aesthetic tilt */
+    transition: transform 0.3s ease;
+}
+
+.profileImageWrapper:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.profilePlaceholder {
+    width: 100%;
+    height: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: 6rem 2rem;
-    /* Subtle gradient background */
-    background: radial-gradient(circle at 50% 10%, rgba(0, 242, 255, 0.05), transparent 40%);
 }
 
-.content {
-    max-width: 800px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.initials {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent);
 }
 
 .badge {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 999px;
-    background: rgba(112, 0, 255, 0.1);
-    color: var(--secondary);
-    border: 1px solid rgba(112, 0, 255, 0.2);
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--accent);
+    align-self: flex-start;
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
+    color: var(--foreground);
     letter-spacing: -0.02em;
 }
 
 .role {
-    background: linear-gradient(to right, var(--foreground), var(--accent));
-    -webkit-background-clip: text;
-    color: transparent;
-    display: block;
-    margin-top: 0.5rem;
+    color: var(--secondary);
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .bio {
-    font-size: 1.25rem;
-    color: #888;
-    max-width: 600px;
-    margin-bottom: 3rem;
-    line-height: 1.6;
-}
-
-.actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.primaryBtn {
-    padding: 1rem 2.5rem;
-    background: var(--foreground);
-    color: var(--background);
-    font-weight: 600;
-    border-radius: 999px;
-    font-size: 1.1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.primaryBtn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--secondary);
+    max-width: 550px;
+    white-space: pre-line;
 }
 
 .socials {
     display: flex;
     gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .socialLink {
-    color: #666;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--foreground);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
     padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
+}
+
+.socialLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
 }
 
 .socialLink:hover {
-    color: var(--foreground);
-    border-bottom-color: var(--accent);
+    color: var(--accent);
 }
 
-@media (max-width: 768px) {
-    .title {
-        font-size: 3rem;
+.socialLink:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   Bottom Section: Details Grid
+   ========================================= */
+.bottomSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    /* Optional separator */
+}
+
+.detailTitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    /* Keep small underline for title */
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
+.courseList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.courseItem {
+    font-size: 1rem;
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+}
+
+.courseItem::before {
+    content: '•';
+    color: var(--accent);
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.groupLabel {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tag {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--foreground);
+}
+
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 900px) {
+    .topSection {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
     }
 
-    .bio {
-        font-size: 1.1rem;
+    .introLeft {
+        align-items: center;
+        /* Center text on mobile */
+    }
+
+    .badge {
+        align-self: center;
+        /* Center badge */
+    }
+
+    .imageRight {
+        order: -1;
+        /* Move image to top on mobile? User didn't specify, but standard practice. Or keep below. */
+        /* Let's keep it below for now or user might prefer top. 
+           Actually standard is Image Top on mobile. Let's try Order -1 */
+        order: -1;
+    }
+
+    .bottomSection {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero {
+        padding-top: 6rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
     }
 }

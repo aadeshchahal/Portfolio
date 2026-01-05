@@ -37,6 +37,13 @@ export default async function ExperiencePage({ params }: Props) {
             </header>
 
             <main className={styles.content}>
+
+                {job.intro && (
+                    <div className={styles.introSection}>
+                        <p>{job.intro}</p>
+                    </div>
+                )}
+
                 <div className={styles.card}>
                     <h3>Key Achievements & Responsibilities</h3>
                     <ul className={styles.list}>

@@ -39,31 +39,45 @@
 }
 
 .period {
-    color: #888;
+    color: var(--secondary);
     font-family: var(--font-heading);
+    font-weight: 500;
 }
 
 .role {
     font-size: 3rem;
-    color: #fff;
+    color: var(--foreground);
     line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .content {
     animation: fadeIn 0.5s ease;
 }
 
+.introSection {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--secondary);
+    max-width: 65ch;
+    /* Optimal line length for reading */
+    white-space: pre-line;
+}
+
 .card {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--surface);
     padding: 2.5rem;
     border-radius: 12px;
     border: 1px solid var(--border);
 }
 
 .card h3 {
-    color: #fff;
+    color: var(--foreground);
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .list {
@@ -73,7 +87,8 @@
 
 .list li {
     margin-bottom: 1rem;
-    color: #ccc;
+    color: #444;
+    /* Dark grey for readability */
     line-height: 1.6;
     position: relative;
     padding-left: 1.5rem;
@@ -111,10 +126,11 @@
 }
 
 .gallery h3 {
-    color: #fff;
+    color: var(--foreground);
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     font-family: var(--font-heading);
+    font-weight: 700;
 }
 
 .grid {

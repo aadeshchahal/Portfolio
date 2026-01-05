@@ -9,6 +9,6 @@
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    color: #666;
+    color: var(--secondary);
     font-size: 0.9rem;
 }

@@ -37,28 +37,45 @@
 
 .item {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 2rem;
+    grid-template-areas:
+        "header date"
+        "content content";
+    grid-template-columns: 1fr auto;
+    gap: 1rem 2rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--surface);
     border-radius: 12px;
-    border: 1px solid transparent;
+    border: 1px solid var(--border);
     transition: all 0.2s ease;
     cursor: pointer;
 }
 
 .itemLink:hover .item {
     border-color: var(--accent);
-    background: rgba(255, 255, 255, 0.04);
-    transform: translateX(10px);
+    background: var(--surface-hover);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.mainInfo {
+    grid-area: header;
+}
+
+.meta {
+    grid-area: date;
+}
+
+.content {
+    grid-area: content;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
 }
 
 .date {
     font-family: var(--font-heading);
-    color: #666;
+    color: var(--secondary);
     font-weight: 500;
     text-align: right;
-    padding-top: 0.25rem;
     transition: color 0.2s;
 }
 
@@ -112,4 +129,56 @@
         color: var(--accent);
         font-size: 0.9rem;
     }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.compactItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+.itemLink:first-child .compactItem {
+    border-top: 1px solid var(--border);
+}
+
+.itemLink:hover .compactItem {
+    background: var(--surface-hover);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.compactItem .role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--foreground);
+}
+
+.compactItem .company {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    margin: 0;
+    font-weight: 400;
+}
+
+.compactItem .mainInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.compactItem .meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }

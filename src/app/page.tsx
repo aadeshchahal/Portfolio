@@ -1,9 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Experience from '@/components/Experience';
-import ProjectCard from '@/components/ProjectCard';
 import Footer from '@/components/Footer';
-import { portfolioData } from '@/data/portfolio';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -12,18 +10,19 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <section id="work" className={styles.section}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Featured Projects</h2>
-          <div className={styles.grid}>
-            {portfolioData.projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
+      <section className={styles.navSection}>
+        <div className={styles.navContainer}>
+          <Link href="/projects" className={styles.navCard}>
+            <span className={styles.navLabel}>Featured Projects</span>
+            <span className={styles.navArrow}>→</span>
+          </Link>
+
+          <Link href="/experience" className={styles.navCard}>
+            <span className={styles.navLabel}>Work Experience</span>
+            <span className={styles.navArrow}>→</span>
+          </Link>
         </div>
       </section>
-
-      <Experience />
 
       <Footer />
     </main>
