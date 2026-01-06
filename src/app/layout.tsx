@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: "Materials Engineering & Development Portfolio",
 };
 
+import Navbar from "@/components/Navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>

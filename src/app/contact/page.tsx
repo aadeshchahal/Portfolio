@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { portfolioData } from '@/data/portfolio';
 import styles from '../page.module.css'; // Reuse main page styles
@@ -9,8 +8,6 @@ export default function ContactPage() {
 
     return (
         <main className={styles.main}>
-            <Navbar />
-
             <section className={styles.section} style={{ paddingTop: '8rem', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
                 <div className={styles.container}>
                     <div className={contactStyles.card}>

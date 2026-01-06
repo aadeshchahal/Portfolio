@@ -69,7 +69,7 @@ export const portfolioData: PortfolioData = {
             "MTRL 358/9: Hydrometallurgy/Lab",
             "MANU 465: AI and Machine Learning Application in Manufacturing",
         ],
-        technicalInterests: ["Oil and Gas", "Mining", "NDE / Asset Integrity", "Semiconductor Materials and Processes", "Finance"],
+        technicalInterests: ["Energy", "Mining", "NDE / Asset Integrity", "Semiconductor Materials and Processes", "Finance"],
         personalInterests: ["Weightlifting", "Ice Hockey", "Golf",],
         social: [
             { platform: "LinkedIn", url: "https://www.linkedin.com/in/aadeshchahal/" },
@@ -85,7 +85,7 @@ export const portfolioData: PortfolioData = {
             company: "Suncor Energy",
             period: "May 2024 - Dec 2024",
             summary: "Executed materials engineering projects across all areas of Fort Hills Mine, including mobile mine equipment, fixed plant operations, and tailings management.",
-            intro: "During my 8-month internship at Suncor Energy's Fort Hills Mine, I was able to gain extensive knowledge in the energy and mining sector. \n\n I worked within the Asset Integrity and Reliability team. I was apart of project across the site, from mobile mine equipment to tailings management. This role required a deep understanding of corrosion mechanisms, wear patterns, and NDE techniques to optimize asset performance and reliability." + "\n\n" + "This role allowed me to gain extensive knowledge in the energy and mining sector",
+            intro: "During my 8-month internship at Suncor Energy's Fort Hills Mine, I was able to gain extensive knowledge in the energy and mining sector. \n\n I worked within the Asset Integrity and Reliability team. I was apart of project across the site, from mobile mine equipment to tailings management. This role required a deep understanding of corrosion mechanisms, wear patterns, and NDE techniques to optimize asset performance and reliability.",
             description: [
                 "Administered a $200K budget to apply a HVOF thermal spray coating to Komatsu 980E haul truck bolsters to decrease exhaust heat corrosion and maintenance time.",
                 "Increased lifespan of slurry piping assets using GE APM to calculate erosion rates from NDE readings and thickness monitoring.",
