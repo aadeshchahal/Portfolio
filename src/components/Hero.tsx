@@ -13,7 +13,7 @@ export default function Hero() {
                     <div className={styles.introLeft}>
                         <div className={styles.badgesContainer}>
                             <div className={styles.badge}>Available for Co-op / Internship in May 2026</div>
-                            <div className={styles.badge}>Predicted Graduation: May - Dec 2027</div>
+                            <div className={styles.badge}>Predicted Graduation: April or December 2027</div>
                         </div>
                         <h1 className={styles.title}>
                             Hello, I'm {profile.name}.
