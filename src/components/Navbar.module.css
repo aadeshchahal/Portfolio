@@ -27,9 +27,7 @@
     color: var(--foreground);
 }
 
-.dot {
-    color: var(--accent);
-}
+
 
 .links {
     display: flex;

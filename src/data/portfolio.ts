@@ -25,6 +25,10 @@ export interface Experience {
     intro?: string; // Brief intro paragraph for the dedicated page
     description: string[]; // Detailed bullet points for the dedicated page
     images?: string[]; // Array of paths to images in public/experience folder
+    relatedProject?: {
+        id: string;
+        name: string;
+    };
 }
 
 export interface SocialLink {
@@ -88,6 +92,14 @@ export const portfolioData: PortfolioData = {
                 "Created rebuild scopes of work for CAT D8 bulldozers, decreasing frequency of third party work by 50%.",
                 "Reduced biological corrosion by 10% in recycled water pipes by developing a filter system.",
             ],
+            images: [
+                "/experience/suncor/1732301969912.jpg",
+                "/experience/suncor/1757036527223.jpg",
+            ],
+            relatedProject: {
+                id: "p1",
+                name: "Komatsu 980E Bolster Project"
+            }
         },
         {
             id: "2",

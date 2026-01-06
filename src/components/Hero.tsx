@@ -11,7 +11,10 @@ export default function Hero() {
                 {/* Top Section: Intro (Left) + Image (Right) */}
                 <div className={styles.topSection}>
                     <div className={styles.introLeft}>
-                        <div className={styles.badge}>Available for Co-op / Internship in May 2026</div>
+                        <div className={styles.badgesContainer}>
+                            <div className={styles.badge}>Available for Co-op / Internship in May 2026</div>
+                            <div className={styles.badge}>Predicted Graduation: May 2027</div>
+                        </div>
                         <h1 className={styles.title}>
                             Hello, I'm {profile.name}.
                             <br />

@@ -44,6 +44,14 @@ export default async function ExperiencePage({ params }: Props) {
                     </div>
                 )}
 
+                {job.relatedProject && (
+                    <div className={styles.relatedProjectContainer}>
+                        <Link href={`/projects/${job.relatedProject.id}`} className={styles.relatedProjectLink}>
+                            View Related Project: {job.relatedProject.name} →
+                        </Link>
+                    </div>
+                )}
+
                 <div className={styles.card}>
                     <h3>Key Achievements & Responsibilities</h3>
                     <ul className={styles.list}>

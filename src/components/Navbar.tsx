@@ -6,11 +6,12 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    Portfolio<span className={styles.dot}>.</span>
+                    Aadesh Chahal Portfolio
                 </Link>
                 <div className={styles.links}>
                     <Link href="/projects" className={styles.link}>Featured Projects</Link>
                     <Link href="/experience" className={styles.link}>Work Experience</Link>
+                    <a href="/pdfs/resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Resume</a>
                     <Link href="/contact" className={styles.cta}>Contact</Link>
                 </div>
             </div>

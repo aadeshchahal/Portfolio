@@ -66,6 +66,31 @@
     white-space: pre-line;
 }
 
+.relatedProjectContainer {
+    margin-bottom: 2.5rem;
+}
+
+.relatedProjectLink {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.relatedProjectLink:hover {
+    background: var(--accent);
+    color: #fff;
+    /* Assuming white text on accent color */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
 .card {
     background: var(--surface);
     padding: 2.5rem;
