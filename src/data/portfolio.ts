@@ -64,7 +64,7 @@ export const portfolioData: PortfolioData = {
         photoUrl: "/profile.jpg", // Expecting file in public folder
         coursework: [
             "MTRL 363 & 478: Semiconductor Processing and Materials",
-            "MTRL  361: Modelling of Materials Processes",
+            "MTRL 361: Modelling of Materials Processes",
             "MTRL 486: Nondestructive Evaluation",
             "MTRL 358/9: Hydrometallurgy/Lab",
             "MANU 465: AI and Machine Learning Application in Manufacturing",
@@ -85,7 +85,7 @@ export const portfolioData: PortfolioData = {
             company: "Suncor Energy",
             period: "May 2024 - Dec 2024",
             summary: "Executed materials engineering projects across all areas of Fort Hills Mine, including mobile mine equipment, fixed plant operations, and tailings management.",
-            intro: "During my 8-month internship at Suncor Energy's Fort Hills Mine, I was able to gain extensive knowledge in the energy and mining sector. \n\n I worked within the Asset Integrity and Reliability team. I was apart of project across the site, from mobile mine equipment to tailings management. This role required a deep understanding of corrosion mechanisms, wear patterns, and NDE techniques to optimize asset performance and reliability.",
+            intro: "During my 8-month internship at Suncor Energy's Fort Hills Mine, I was able to gain extensive knowledge in the energy and mining sector. \n\n I worked within the Asset Integrity and Reliability team. I was a part of projects across the site, including mobile mine equipment, fixed plant operations, and tailings management. This role required a deep understanding of corrosion mechanisms, wear patterns, and NDE techniques to optimize asset performance and reliability.",
             description: [
                 "Administered a $200K budget to apply a HVOF thermal spray coating to Komatsu 980E haul truck bolsters to decrease exhaust heat corrosion and maintenance time.",
                 "Increased lifespan of slurry piping assets using GE APM to calculate erosion rates from NDE readings and thickness monitoring.",
@@ -194,7 +194,7 @@ export const portfolioData: PortfolioData = {
             id: "p3",
             title: "Ice Hockey Stick Material Selection",
             description: "Designed a CFRP ice hockey stick optimizing for durability, flex, and weight using FEA and Ashby charts.",
-            detailedDescription: "Led a team of 4 to design a Carbon Fiber Reinforced Polymer (CFRP) ice hockey stick. The goal was to balance conflicting requirements of durability, flex, lightness, and cost to meet NHL/IIHF performance standards. \n\nWe utilized Ashby charts for material selection and conducted extensive Finite Element Analysis (FEA) in Abaqus and Ansys to simulate bending and torsional loads, ensuring the stick remained under 400g while maintaining structural integrity.",
+            detailedDescription: "Led a team of 4 individuals to design a Carbon Fiber Reinforced Polymer (CFRP) ice hockey stick. The goal was to balance conflicting requirements of durability, flex, lightness, and cost to meet NHL/IIHF performance standards. \n\nWe utilized Ashby charts for material selection and conducted extensive Finite Element Analysis (FEA) in Abaqus and Ansys to simulate bending and torsional loads, ensuring the stick remained under 400g while maintaining structural integrity.",
             challenges: [
                 "Balancing durability, flex, and weight to meet strict NHL/IIHF standards.",
                 "Maintaining structural integrity under complex torsional loads while keeping weight below 400g.",
